@@ -1,0 +1,3 @@
+/home/jucic/cv_project/open_stereo_camera/build/CMakeFiles/rebuild_cache.dir
+/home/jucic/cv_project/open_stereo_camera/build/CMakeFiles/edit_cache.dir
+/home/jucic/cv_project/open_stereo_camera/build/CMakeFiles/stereo_camera.dir
