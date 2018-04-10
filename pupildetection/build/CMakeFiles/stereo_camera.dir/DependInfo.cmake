@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jucic/cv_project/open_stereo_camera/stereo_camera.cpp" "/home/jucic/cv_project/open_stereo_camera/build/CMakeFiles/stereo_camera.dir/stereo_camera.cpp.o"
+  "/home/jucic/study/pupildetectionlinux/pupildetection/stereo_camera.cpp" "/home/jucic/study/pupildetectionlinux/pupildetection/build/CMakeFiles/stereo_camera.dir/stereo_camera.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

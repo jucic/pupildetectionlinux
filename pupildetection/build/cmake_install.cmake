@@ -1,4 +1,4 @@
-# Install script for directory: /home/jucic/cv_project/open_stereo_camera
+# Install script for directory: /home/jucic/study/pupildetectionlinux/pupildetection
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/jucic/cv_project/open_stereo_camera/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jucic/study/pupildetectionlinux/pupildetection/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
