@@ -10,9 +10,13 @@ using namespace cv;
 cv::VideoCapture capture0(2);
 cv::VideoCapture capture1(1);
 
+pthread_t pthread1;
+pthread_t pthread2;
+
 void *thread1(void *arg)
 {
 	cv::Mat initframe1;
+        pthread_detach(pthread_self());
 	while (1)
 	{
 		*((cv::VideoCapture *)arg) >> initframe1;
@@ -23,6 +27,7 @@ void *thread1(void *arg)
 void *thread2(void *arg)
 {
 	cv::Mat initframe2;
+        pthread_detach(pthread_self());
 	while (1)
 	{
 		*((cv::VideoCapture *)arg) >> initframe2;
@@ -33,6 +38,8 @@ void *thread2(void *arg)
 
 int main()
 {
+    void *tret1,*tret2;
+
     cv::Mat frame0;
     capture0.set(CAP_PROP_FRAME_WIDTH,320);
     capture0.set(CAP_PROP_FRAME_HEIGHT,240);
@@ -49,15 +56,15 @@ int main()
     capture1.set(CAP_PROP_FRAME_WIDTH,1280);
     capture1.set(CAP_PROP_FRAME_HEIGHT,720);
 
-    pthread_t pthread1;
-    pthread_t pthread2;
     pthread_create(&pthread1, NULL, thread1, (void *)&capture0);//传入的时候必须强制转换为void* 类型，即无类型指针
     pthread_create(&pthread2, NULL, thread2, (void *)&capture1);
-    //pthread_join(pthread1, NULL);
-    //pthread_join(pthread2, NULL);
+    
+    //pthread_join(pthread1, &tret1);
+    //pthread_join(pthread2, &tret2);
 
-    pthread_detach(pthread1);
-    pthread_detach(pthread2);
+
+    //pthread_detach(pthread1);
+    //pthread_detach(pthread2);
 
     //while(1)
     //{
